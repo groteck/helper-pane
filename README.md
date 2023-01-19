@@ -51,4 +51,4 @@ This example binds `<prefix> t` to display the pane.
 
 ## License
 
-MIT
+[MIT](/LICENSE.md)
