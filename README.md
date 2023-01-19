@@ -36,18 +36,14 @@ tmux source-file ~/.tmux.conf
 
 ## Usage
 
-Just hit `C-t` and a pane will appear at the bottom if you hit `C-t` again
-the pane will be hidden (move to another window).
-
-### Change key binding
-
 Add to your `tmux.conf`:
 
 ```tmux
 unbind -n 'C-t' # this is to remove the existing key binding
-bind t run-shell '~/.tmux/plugins/helper-pane/scripts/helper-pane.sh'
+bind -n 'C-t' run-shell '~/.tmux/plugins/helper-pane/helper-pane.sh'
 ```
-This example binds `<prefix> t` to display the pane.
+
+This example binds `C-t` to display the pane without `<prefix>` key.
 
 ## License
 
