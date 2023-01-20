@@ -32,5 +32,3 @@ if [ -n "$P" ] && ! tmux lsp -F'#{pane_id}'| grep -q ^$P; then
     tmux join-pane -v -p 18 -s $P
     exit 0
 fi
-
-
