@@ -3,7 +3,7 @@
 P=$(tmux show -sqv @helperpane)
 
 function createHelperpane() {
-    P=$(tmux splitw -v -p 18 -PF'#{pane_id}' -c '#{pane_current_path}')
+    P=$(tmux splitw -v -l 18% -PF'#{pane_id}' -c '#{pane_current_path}')
     tmux set -sq @helperpane "$P"
 }
 
@@ -29,6 +29,6 @@ fi
 
 # if the helper pane is hidden, show it
 if [ -n "$P" ] && ! tmux lsp -F'#{pane_id}'| grep -q ^$P; then
-    tmux join-pane -v -p 18 -s $P
+    tmux join-pane -v -l 18% -s $P
     exit 0
 fi
